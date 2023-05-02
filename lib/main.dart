@@ -38,8 +38,17 @@ class _BallState extends State<Ball> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
+      appBar: AppBar(
+        backgroundColor: Colors.blue[900],
+        title: const Text('Ask Me Anything'),
+      ),
       body: Center(
-        child: Image.asset('images/ball1.png'),
+        child: TextButton(
+          onPressed: () {
+            print('I got clicked');
+          },
+          child: Image.asset('images/ball1.png'),
+        ),
       ),
     );
   }
