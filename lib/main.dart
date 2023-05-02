@@ -36,7 +36,7 @@ class Ball extends StatefulWidget {
 }
 
 class _BallState extends State<Ball> {
-  int ballNumber = 0;
+  int ballNumber = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -46,8 +46,8 @@ class _BallState extends State<Ball> {
         child: TextButton(
           onPressed: () {
             setState(() {
-              ballNumber = Random().nextInt(5);
-              print(ballNumber);
+              ballNumber = Random().nextInt(5) + 1;
+              print('I got clicked : $ballNumber');
             });
           },
           child: Image.asset('images/ball$ballNumber.png'),
